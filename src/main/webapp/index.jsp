@@ -12,6 +12,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%
+            for (int i = 0; i < 10; i++) {
+                out.println("<h1> Hello jsp </h1>");
+            }
+        %>
     </body>
 </html>
