@@ -6,9 +6,7 @@
 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean id="o" class="com.sa.ems.entity.Organizer" scope="session" />
-<jsp:setProperty name="o" property="id" value="1" />
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,10 +14,27 @@
         <title>JSP Page</title>
     </head>
     <body>
-       
+
         <h1>
-            <jsp:getProperty name="o" property="name"/>
-           
+            <!--Expression lang-->
+            ${2+3}
         </h1>
+        <h1>
+
+            ${3>6}
+        </h1>
+
+        <%
+
+            String[] languages = {"JAVA", "PHP", "C#", "PYTHON"};
+            
+for (String language : languages) {
+        out.println(language);
+    }
+
+        %>
+        
+       
+
     </body>
 </html>
