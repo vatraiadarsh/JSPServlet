@@ -8,7 +8,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="o" class="com.sa.ems.entity.Organizer" scope="session" />
 <jsp:setProperty name="o" property="id" value="1" />
-<jsp:setProperty name="o" property="name" value="UOW" />
+
 <!DOCTYPE html>
 <html>
     <head>

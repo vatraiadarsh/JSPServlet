@@ -16,6 +16,8 @@
             <!--if gone to this address we get it the same from session-->
             <!--http://localhost:8080/jspServlet/second.jsp-->
             <jsp:getProperty name="o" property="name" />
+            
+            <jsp:setProperty name="o" property="name" value="TEST" />
         </h1>
     </body>
-</html>
+</html> 

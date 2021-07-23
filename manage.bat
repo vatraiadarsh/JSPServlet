@@ -1,3 +1,3 @@
 git add .
-git commit -m "jsp useBean"
+git commit -m "Session Scope"
 git push -u origin main
