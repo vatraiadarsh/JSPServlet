@@ -5,9 +5,7 @@
  */
 package com.sa.ems.servlet;
 
-import com.sa.ems.entity.Organizer;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,21 +15,22 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author vatra
  */
-public class DefaultServlet extends HttpServlet{
-    Organizer oz;
+public class DefaultServlet extends HttpServlet {
+
     @Override
-    public void init() throws ServletException {
-      oz = new Organizer(1, "UOW", true);
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setHeader("Content-Type", "text/html");
+        resp.getWriter().println("<form method=\"post\">"
+                + "<input type='text name='cname'/>"
+                + "<button type ='submit'>Save</button><form>");
     }
 
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        PrintWriter out =  res.getWriter();
-        for (int i = 0; i < 10; i++) {
-             out.println("<h1>"+oz.getName()+"</h1>");
-        }
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+       resp.getWriter().println("Thankyou ");
     }
     
     
     
+
 }

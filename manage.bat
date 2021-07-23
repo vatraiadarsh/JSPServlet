@@ -1,3 +1,3 @@
 git add .
-git commit -m "Servlet mapping with xml"
+git commit -m "html + servlet"
 git push -u origin main
