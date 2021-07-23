@@ -4,6 +4,7 @@
     Author     : vatra
 --%>
 
+<%@page import="com.sa.ems.entity.Organizer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,9 +14,8 @@
     </head>
     <body>
         <%
-            for (int i = 0; i < 10; i++) {
-                out.println("<h1> Hello jsp </h1>");
-            }
+        Organizer organizer = new Organizer(1,"University of Wollongong", true);
         %>
+        <h1><%=organizer.getName()%></h1>
     </body>
 </html>
