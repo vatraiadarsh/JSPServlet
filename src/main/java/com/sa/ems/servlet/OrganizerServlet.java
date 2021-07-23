@@ -11,17 +11,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.sa.ems.entity.Organizer;
+import javax.servlet.annotation.WebServlet;
 
 
 /**
  *
  * @author vatra
  */
+@WebServlet(name="orgServlet",urlPatterns = {"/organizers"})
 public class OrganizerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("organizer", new Organizer(1, "wsu", true));
+        req.setAttribute("organizer", new Organizer(1, "world C!", true));
         // can pass anything in setAttribute as it is a object
         req.getRequestDispatcher("/WEB-INF/views/organizers/index.jsp").forward(req, resp);
     }

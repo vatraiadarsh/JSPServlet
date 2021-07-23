@@ -1,3 +1,3 @@
 git add .
-git commit -m "Servlet xml mapping"
+git commit -m "using @WebServlet()"
 git push -u origin main
