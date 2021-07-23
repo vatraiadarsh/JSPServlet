@@ -1,3 +1,3 @@
 git add .
-git commit -m "java in jspPage"
+git commit -m "jsp useBean"
 git push -u origin main

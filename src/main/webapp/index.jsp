@@ -4,8 +4,11 @@
     Author     : vatra
 --%>
 
-<%@page import="com.sa.ems.entity.Organizer"%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean id="o" class="com.sa.ems.entity.Organizer" scope="session" />
+<jsp:setProperty name="o" property="id" value="1" />
+<jsp:setProperty name="o" property="name" value="UOW" />
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,9 +16,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%
-        Organizer organizer = new Organizer(1,"University of Wollongong", true);
-        %>
-        <h1><%=organizer.getName()%></h1>
+       
+        <h1>
+            <jsp:getProperty name="o" property="name"/>
+           
+        </h1>
     </body>
 </html>

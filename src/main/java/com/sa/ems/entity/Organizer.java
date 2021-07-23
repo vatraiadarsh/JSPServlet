@@ -48,4 +48,9 @@ public class Organizer {
         this.status = status;
     }
 
+    @Override
+    public String toString() {
+        return "Organizer{" + "id=" + id + ", name=" + name + ", status=" + status + '}';
+    }
+
 }
