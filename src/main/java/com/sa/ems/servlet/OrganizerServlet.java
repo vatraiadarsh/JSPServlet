@@ -10,17 +10,20 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.sa.ems.entity.Organizer;
+
 
 /**
  *
  * @author vatra
  */
-public class DefaultServlet extends HttpServlet {
+public class OrganizerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setAttribute("title", "My form");
-        req.getRequestDispatcher("/WEB-INF/views/index.jsp").forward(req, resp);
+        req.setAttribute("organizer", new Organizer(1, "wsu", true));
+        // can pass anything in setAttribute as it is a object
+        req.getRequestDispatcher("/WEB-INF/views/organizers/index.jsp").forward(req, resp);
     }
 
     @Override
